@@ -6,5 +6,5 @@ def print_reversed_list_integer(my_list=[]):
             try:
                 print("{:d}".format(my_list[i]))
                 i -= 1
-            except ValueError:
-                raise ValueError
+            except Exception as e:
+                raise e
