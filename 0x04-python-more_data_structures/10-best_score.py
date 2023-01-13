@@ -3,4 +3,5 @@ def best_score(a_dictionary):
     if not a_dictionary:
         return None
     best_score = max(list(a_dictionary.values()))
-    return list(a_dictionary.keys())[list(a_dictionary.values()).index(best_score)]
+    student_names = list(a_dictionary.keys())
+    return student_names[list(a_dictionary.values()).index(best_score)]
