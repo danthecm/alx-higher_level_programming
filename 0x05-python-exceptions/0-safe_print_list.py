@@ -6,5 +6,5 @@ def safe_print_list(my_list=[], x=0):
             number += 1
             print(my_list[i], end="") if i - 1 != x else print(my_list[i])
     except:
-        pass
+        number = 0
     return number
