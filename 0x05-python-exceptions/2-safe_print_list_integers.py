@@ -12,4 +12,3 @@ def safe_print_list_integers(my_list=[], x=0):
                 raise e
     print("\n", end="")
     return real_number
-safe_print_list_integers(["Hi",2,5,6,3,4,2,3], 10)
