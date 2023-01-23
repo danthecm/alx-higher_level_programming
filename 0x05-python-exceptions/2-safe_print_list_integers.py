@@ -5,12 +5,9 @@ def safe_print_list_integers(my_list=[], x=0):
         try:
             print("{:d}".format(my_list[i]), end="")
             real_number += 1
-        except (ValueError, IndexError, Exception) as e:
-            if isinstance(e, ValueError):
-                continue
-            elif isinstance(e, IndexError):
-                raise IndexError
-            else:
-                raise e
+        except ValueError:
+            continue
+        except Exception as e:
+            raise e
     print("\n", end="")
     return real_number
