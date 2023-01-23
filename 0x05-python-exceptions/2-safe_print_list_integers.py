@@ -8,8 +8,6 @@ def safe_print_list_integers(my_list=[], x=0):
                 real_number += 1
             except ValueError:
                 continue
-            except Exception:
-                continue
         print("\n", end="")
     except IndexError as e:
         raise e
