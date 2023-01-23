@@ -8,7 +8,7 @@ def safe_print_list_integers(my_list=[], x=0):
         except (ValueError, IndexError) as e:
             if isinstance(e, ValueError):
                 continue
-            if isinstance(e, IndexError):
-                raise e
+            else:
+                raise IndexError
     print("\n", end="")
     return real_number
