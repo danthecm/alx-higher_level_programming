@@ -13,6 +13,7 @@ def safe_print_list_integers(my_list=[], x=0):
     except Exception as e:
         raise e
     finally:
-        if x != 0:
-            print("\n", end="")
+        print("\n", end="")
         return real_number
+
+print(safe_print_list_integers([], 0))
