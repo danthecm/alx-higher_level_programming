@@ -8,8 +8,7 @@ def safe_print_division(a, b):
         pass
     finally:
         if result:
-            print("Inside result: {:f}".format(result))
+            print("Inside result: {:.1f}".format(result))
         else:
             print("Inside result: {}".format(result))
-
-safe_print_division(10, 5)
+        return result
