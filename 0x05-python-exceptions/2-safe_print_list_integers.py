@@ -15,5 +15,3 @@ def safe_print_list_integers(my_list=[], x=0):
     finally:
         print("\n", end="")
         return real_number
-
-print(safe_print_list_integers([], 0))
