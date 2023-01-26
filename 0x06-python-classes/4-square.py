@@ -20,7 +20,11 @@ class Square:
 
     @property
     def size(self) -> int:
-        return self.__size
+        return self.size
+    
+    @size.setter
+    def size(self, value) -> int:
+        self.size = value
 
     def area(self):
         return self.__size * self.__size
