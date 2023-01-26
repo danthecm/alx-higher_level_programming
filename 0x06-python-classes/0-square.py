@@ -2,6 +2,8 @@
 """
 A simple implementtation of a square class
 """
+
+
 class Square:
     """A class for generating squares
 
@@ -9,4 +11,3 @@ class Square:
 
     def __init__(self) -> None:
         pass
-    pass
