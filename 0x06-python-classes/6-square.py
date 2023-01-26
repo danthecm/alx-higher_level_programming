@@ -63,5 +63,6 @@ class Square:
         if self.size == 0:
             print("")
         else:
+            print("")
             for i in range(0, self.size):
                 print(f"{' ' * self.position[0]}{'#' * self.size}")
