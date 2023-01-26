@@ -21,7 +21,7 @@ class Square:
     @property
     def size(self) -> int:
         return self.__size
-    
+
     @size.setter
     def size(self, value) -> int:
         if not isinstance(value, (int)):
