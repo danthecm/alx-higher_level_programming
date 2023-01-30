@@ -61,13 +61,25 @@ class Rectangle:
 
     @classmethod
     def increament_counter(cls):
-        """Increament the number of instance counter"""
+        """Increment the number of instance counter"""
         cls.number_of_instances += 1
 
     @classmethod
     def decreament_counter(cls):
         """Decrement the number of instance counter"""
         cls.number_of_instances -= 1
+
+    @classmethod
+    def square(cls, size=0):
+        """Construct a rectangular square
+        Args:
+        size: size of the square
+
+        Returns:
+        Rectangle
+        """
+        cls.validate(size, "size")
+        return cls(size, size)
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):

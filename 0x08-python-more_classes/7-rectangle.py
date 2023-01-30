@@ -8,7 +8,7 @@ class Rectangle:
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
-        "Initializes a Rectangle"
+        """Initializes a Rectangle"""
         self.validate(width, "width")
         self.__width = width
         self.validate(height, "height")
