@@ -6,6 +6,7 @@ class Rectangle:
     """Creates a simple Rectangle Object"""
 
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         "Initializes a Rectangle"
@@ -14,7 +15,6 @@ class Rectangle:
         self.validate(height, "height")
         self.__height = height
         self.increament_counter()
-        self.print_symbol = "#"
 
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
