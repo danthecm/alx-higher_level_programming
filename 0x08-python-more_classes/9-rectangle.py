@@ -71,12 +71,12 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """Construct a rectangular square
+        """
+        Creates a square rectangle object with equal width and height
         Args:
-        size: size of the square
-
+        size (int, optional): size of the square rectangle, default is 0.
         Returns:
-        Rectangle
+        Rectangle: square rectangle object with equal width and height.
         """
         cls.validate(size, "size")
         return cls(size, size)
@@ -106,3 +106,8 @@ class Rectangle:
             raise TypeError("{} must be an integer".format(word))
         elif value < 0:
             raise ValueError("{} must be >= 0".format(word))
+
+
+my_square = Rectangle.square(19)
+print("Area: {} - Perimeter: {}".format(my_square.area(), my_square.perimeter()))
+print(my_square)
