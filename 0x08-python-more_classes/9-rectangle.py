@@ -106,8 +106,3 @@ class Rectangle:
             raise TypeError("{} must be an integer".format(word))
         elif value < 0:
             raise ValueError("{} must be >= 0".format(word))
-
-
-my_square = Rectangle.square(19)
-print("Area: {} - Perimeter: {}".format(my_square.area(), my_square.perimeter()))
-print(my_square)
