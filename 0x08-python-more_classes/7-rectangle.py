@@ -77,3 +77,7 @@ class Rectangle:
             raise TypeError("{} must be an integer".format(word))
         elif value < 0:
             raise ValueError("{} must be >= 0".format(word))
+
+my_rectangle_1 = Rectangle(8, 4)
+my_rectangle_1.print_symbol = ["Holberton", "School"]
+print(my_rectangle_1)
