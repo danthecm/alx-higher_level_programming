@@ -19,9 +19,9 @@ class Rectangle:
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
             return ""
-        single_row = self.print_symbol * self.__width
-        my_string = (str(single_row) + "\n") * (int(self.__height) - 1)
-        my_string = my_string + str(single_row)
+        single_row = str(self.print_symbol) * self.__width
+        my_string = (single_row + "\n") * (int(self.__height) - 1)
+        my_string = my_string + single_row
         return my_string
 
     def __repr__(self):
