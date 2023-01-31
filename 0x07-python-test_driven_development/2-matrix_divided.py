@@ -35,7 +35,8 @@ def matrix_divided(matrix, div):
             if type(num) != int:
                 if type(num) != float:
                     raise TypeError(
-                        "matrix must be matrix (list of lists) of integers/floats")
+                        "matrix must be matrix\
+                        (list of lists) of integers/floats")
             if type(div) != int:
                 if type(div) != float:
                     raise TypeError("div must be a number")
@@ -46,4 +47,3 @@ def matrix_divided(matrix, div):
         new_matrix.append(new_list)
 
     return new_matrix
-
