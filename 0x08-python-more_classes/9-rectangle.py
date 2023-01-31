@@ -78,7 +78,7 @@ class Rectangle:
         Returns:
         Rectangle: square rectangle object with equal width and height.
         """
-        cls.validate(size, "size")
+        cls.validate(size, "width")
         return cls(size, size)
 
     @staticmethod
