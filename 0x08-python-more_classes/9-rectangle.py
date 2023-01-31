@@ -103,6 +103,8 @@ class Rectangle:
         2: value is greater than or equal to zero
         """
         if not isinstance(value, int):
-            raise TypeError("{} must be an integer\nBye Rectangle...".format(word))
+            raise TypeError(
+                "{} must be an integer\nBye rectangle..."
+                .format(word))
         elif value < 0:
-            raise ValueError("{} must be >= 0\nBye Rectangle...".format(word))
+            raise ValueError("{} must be >= 0\nBye rectangle...".format(word))
