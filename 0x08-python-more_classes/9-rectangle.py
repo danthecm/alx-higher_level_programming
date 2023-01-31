@@ -106,9 +106,3 @@ class Rectangle:
             raise TypeError("{} must be an integer\nBye Rectangle...".format(word))
         elif value < 0:
             raise ValueError("{} must be >= 0\nBye Rectangle...".format(word))
-
-try:
-    my_square = Rectangle.square(-2)
-    print("{} / {}".format(my_square.width, my_square.height))
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
