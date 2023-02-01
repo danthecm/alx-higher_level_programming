@@ -35,7 +35,7 @@ Now use it:
     TypeError: b must be an integer
     >>> add_integer(add_integer(10, 15))
     123
-    >>> add_integer(float(2**1022), float(2**1022))
+    >>> add_integer(float(2**1292), float(2**1222))
     Traceback (most recent call last):
         ...
-    OverflowError:
+    OverflowError: int too large to convert to float
