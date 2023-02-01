@@ -20,4 +20,6 @@ def add_integer(a, b=98):
         if type(b) != float:
             raise TypeError("b must be an integer")
         b = int(b)
+    elif abs(a) == float('inf') or abs(b) == float('inf'):
+        raise OverflowError()
     return a + b
