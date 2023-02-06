@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """
-Contains a class Rectangle class
+Contains a class Square class
 """
-BaseGeometry = __import__("9-base_geometry").Rectangle
+Rectangle = __import__("9-rectangles").Rectangle
 
 
-class Square(BaseGeometry):
+class Square(Rectangle):
     """
-    A Rectangle class based on the base geometry class
+    A Square class based on the rectangle class
     """
 
     def __init__(self, size):
