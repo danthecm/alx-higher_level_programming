@@ -1,0 +1,30 @@
+The ``7-base_geometry`` module
+======================
+
+Using ``BaseGeometry``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``BaseGeometry`` from the ``7-base_geometry`` module:
+
+    >>> MyList = __import__('1-my_list').MyList
+
+Initialize a new instance of my List:
+
+    >>> bg = BaseGeometry()
+
+Now use it:
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+        ...
+    TypeError: BaseGeometry.integer_validator() missing 2 required parameters arguments: 'name' and 'value'    >>> my_list.append(2)
+    >>> bg.integer_validator("width", 89)
+
+    >>> bg.integer_validator(10,28)
+    Traceback (most recent call last):
+        ...
+    TypeError: <name> must be a string
+    >>> bg.integer_validator("age", 0)
+    Traceback (most recent call last):
+        ...
+    ValueError: <name> must be greater than 0
