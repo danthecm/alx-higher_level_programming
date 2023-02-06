@@ -5,7 +5,7 @@ are exactly of the same class, or inherits from thesame class
 """
 
 
-def inherits_from(obj, a_class):
+def is_kind_of_class(obj, a_class):
     """
     A function to check if two instances are of the same class
 
