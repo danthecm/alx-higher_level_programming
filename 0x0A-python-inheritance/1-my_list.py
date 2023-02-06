@@ -14,6 +14,24 @@ class MyList(list):
     """
 
     def print_sorted(self):
-        sorted_list = self.copy()
-        sorted_list.sort()
+        try:
+            sorted_list = self.copy()
+            sorted_list.sort()
+        except Exception:
+            sorted_list = self.copy()
         print(sorted_list)
+
+
+my_list = MyList()
+my_list.print_sorted()
+my_list.append(2)
+my_list.append(1)
+my_list.append(10)
+my_list.append(4)
+my_list.print_sorted()
+my_list.append(3)
+my_list.print_sorted()
+my_list.append("Hi")
+my_list.print_sorted()
+my_list.append(5)
+my_list.print_sorted()
