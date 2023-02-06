@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Contains a class BaseGeometry 
+Contains a class BaseGeometry
 """
 
 
