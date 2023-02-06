@@ -10,9 +10,18 @@ class BaseGeometry:
     """
 
     def area(self):
+        """
+        This method is not available yet
+        """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
+        """
+        Validates a value for integer
+        Args:
+        name: string
+        value: integer
+        """
         if not isinstance(name, str):
             raise TypeError("<name> must be a string")
         if not isinstance(value, int):
