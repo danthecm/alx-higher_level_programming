@@ -22,8 +22,6 @@ class BaseGeometry:
         name: string
         value: integer
         """
-        if not isinstance(name, str):
-            raise TypeError("<name> must be a string")
         if not isinstance(value, int):
             raise TypeError("<name> must be an integer")
         elif value <= 0:
