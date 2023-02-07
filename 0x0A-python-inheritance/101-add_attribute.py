@@ -18,6 +18,6 @@ def add_attribute(obj, attr_name, attr_value):
     """
     if not hasattr(obj, '__setattr__'):
         raise TypeError("can't add new attribute")
-    elif hasattr(obj, "__{attr_name}"):
+    elif attr_name.startswith("__"):
         raise TypeError("can't add new attribute")
     setattr(obj, attr_name, attr_value)
