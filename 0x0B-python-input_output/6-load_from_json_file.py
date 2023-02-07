@@ -10,10 +10,10 @@ import json
 
 def load_from_json_file(filename):
     """
-    Returns an object from a json file
+    Creates an Object from a "JSON file".
 
-    Args:
-    filename (str): The name of the file to save to
+    :param filename: The name of the file to be read and deserialized.
+    :return: The object created from the JSON representation in the file.
     """
-    with open(filename, "w") as file:
+    with open(filename, "r") as file:
         return json.load(file)
