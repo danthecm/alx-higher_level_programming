@@ -12,7 +12,7 @@ load_from_json_file = __import__("6-load_from_json_file").load_from_json_file
 args_list = sys.argv[1:]
 
 
-with open("add_item.json", "a+") as file:
+with open("add_item.json", "w+") as file:
     loaded_file = []
     try:
         loaded_file = load_from_json_file("add_item.json")
