@@ -12,12 +12,10 @@ load_from_json_file = __import__("6-load_from_json_file").load_from_json_file
 args_list = sys.argv[1:]
 
 
-with open("add_item.json", "w+") as file:
+with open("add_item.json", "a+") as file:
     loaded_file = []
-    try:
+    if file.seek(0, 1) != 0:
         loaded_file = load_from_json_file("add_item.json")
-    except:
-        pass
     for item in args_list:
         loaded_file.append(item)
     save_to_json_file(loaded_file, "add_item.json")
