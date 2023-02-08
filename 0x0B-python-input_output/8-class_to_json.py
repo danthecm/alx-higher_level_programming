@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-A module that contains a function to convert 
+A module that contains a function to convert
 objects to dictionaries
 """
 
