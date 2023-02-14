@@ -13,11 +13,11 @@ class Rectangle(Base):
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        super().__init__(id=id)
         self.__width = width
         self.__height = height
         self.__y = y
         self.__x = x
+        super().__init__(id)
 
     @property
     def width(self):
@@ -71,10 +71,10 @@ class Rectangle(Base):
     def y(self):
         return self.__y
 
-    @staticmethod
-    def validate_int(value, attr):
-        """
-        Validates that a value is a valid integer
-        """
-        if not (isinstance(value, int)):
-            raise TypeError(f"{attr} must be an integer")
+    # @staticmethod
+    # def validate_int(value, attr):
+    #     """
+    #     Validates that a value is a valid integer
+    #     """
+    #     if not (isinstance(value, int)):
+    #         raise TypeError(f"{attr} must be an integer")
