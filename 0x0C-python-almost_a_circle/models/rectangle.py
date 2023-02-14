@@ -54,7 +54,7 @@ class Rectangle(Base):
         # self.validate_int(x, "x")
         self.__x = x
 
-    @width.getter
+    @x.getter
     def x(self):
         return self.__x
 
