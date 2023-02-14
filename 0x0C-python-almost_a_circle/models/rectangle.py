@@ -105,14 +105,17 @@ class Rectangle(Base):
                 print(" " * self.x, end="")
             print("#" * self.__width)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         Update the class properties with the given arguments
         """
         update_order = ["id", "width", "height", "x", "y"]
-        if len(args) <= len(update_order):
+        if len(args) <= len(update_order) and len(args) != 0:
             for i in range(len(args)):
                 self.__setattr__(update_order[i], args[i])
+        else:
+            for key in kwargs:
+                self.__setattr__(key, kwargs.get(key))
 
     @staticmethod
     def validate_int(value, attr):
