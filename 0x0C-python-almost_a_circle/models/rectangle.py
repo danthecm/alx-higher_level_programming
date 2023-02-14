@@ -13,13 +13,17 @@ class Rectangle(Base):
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        self.validate_int(width, "width")
+        self.validate_int(width, "width", True)
+        self.validate_underzero(width, "width", True)
         self.__width = width
         self.validate_int(height, "height")
+        self. validate_underzero(height, "height")
         self.__height = height
         self.validate_int(x, "x")
+        self.validate_underzero(x, "x")
         self.__x = x
         self.validate_int(y, "y")
+        self.validate_underzero(y, "y")
         self.__y = y
         super().__init__(id)
 
@@ -30,6 +34,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, width):
         self.validate_int(width, "width")
+        self.validate_underzero(width, "width", True)
         self.__width = width
 
     @width.getter
@@ -43,6 +48,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, height):
         self.validate_int(height, "height")
+        self.validate_underzero(height, "height", True)
         self.__height = height
 
     @height.getter
@@ -56,6 +62,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, x):
         self.validate_int(x, "x")
+        self.validate_underzero(x, "x")
         self.__x = x
 
     @x.getter
@@ -69,6 +76,7 @@ class Rectangle(Base):
     @y.setter
     def y(self, y):
         self.validate_int(y, "y")
+        self.validate_underzero(y, "y")
         self.__y = y
 
     @y.getter
@@ -82,3 +90,12 @@ class Rectangle(Base):
         """
         if not (isinstance(value, int)):
             raise TypeError(f"{attr} must be an integer")
+
+    @staticmethod
+    def validate_underzero(value, attr, equal=False):
+        if equal:
+            if value <= 0:
+                raise ValueError(f"{attr} must be > 0")
+        else:
+            if value < 0:
+                raise ValueError(f"{attr} must be >= 0")
