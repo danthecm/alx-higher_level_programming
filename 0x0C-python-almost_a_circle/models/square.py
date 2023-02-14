@@ -20,10 +20,19 @@ class Square(Rectangle):
         return message.format(self.id, self.x, self.y, self.width)
 
     def area(self):
+        """
+        Returns the area of the square
+        """
         return super().area()
 
     def display(self):
+        """
+        Prints # representing the square
+        """
         return super().display()
 
     def update(self, *args, **kwargs):
+        """
+        Update the square attributes dynamically
+        """
         return super().update(*args, **kwargs)
