@@ -18,3 +18,12 @@ class Square(Rectangle):
     def __str__(self):
         message = "[Square] ({}) {}/{} - {}"
         return message.format(self.id, self.x, self.y, self.width)
+
+    def area(self):
+        return super().area()
+
+    def display(self):
+        return super().display()
+
+    def update(self, *args, **kwargs):
+        return super().update(*args, **kwargs)
