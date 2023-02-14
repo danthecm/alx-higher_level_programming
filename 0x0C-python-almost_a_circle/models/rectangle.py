@@ -13,11 +13,11 @@ class Rectangle(Base):
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        self.validate_int(width, "width", True)
+        self.validate_int(width, "width")
         self.validate_underzero(width, "width", True)
         self.__width = width
         self.validate_int(height, "height")
-        self. validate_underzero(height, "height")
+        self. validate_underzero(height, "height", True)
         self.__height = height
         self.validate_int(x, "x")
         self.validate_underzero(x, "x")
@@ -93,6 +93,10 @@ class Rectangle(Base):
 
     @staticmethod
     def validate_underzero(value, attr, equal=False):
+        """
+        Validates if value is less than zero
+        or equal to zero if equal is True
+        """
         if equal:
             if value <= 0:
                 raise ValueError(f"{attr} must be > 0")
