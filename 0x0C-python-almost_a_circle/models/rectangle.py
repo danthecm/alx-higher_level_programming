@@ -105,6 +105,12 @@ class Rectangle(Base):
                 print(" " * self.x, end="")
             print("#" * self.__width)
 
+    def update(self, *args):
+        update_order = ["id", "width", "height", "x", "y"]
+        if len(args) <= len(update_order):
+            for i in range(len(args)):
+                self.__setattr__(update_order[i], args[i])
+
     @staticmethod
     def validate_int(value, attr):
         """
