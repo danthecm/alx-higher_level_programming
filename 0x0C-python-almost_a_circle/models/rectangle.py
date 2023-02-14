@@ -83,6 +83,9 @@ class Rectangle(Base):
     def y(self):
         return self.__y
 
+    def area(self):
+        return self.height * self.width
+
     @staticmethod
     def validate_int(value, attr):
         """
