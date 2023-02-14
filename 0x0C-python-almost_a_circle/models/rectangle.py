@@ -2,7 +2,7 @@
 """
 Contains Rectangle Model for creating rectangles
 """
-from base import Base
+from .base import Base
 
 
 class Rectangle(Base):
