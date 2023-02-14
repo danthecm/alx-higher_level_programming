@@ -2,7 +2,7 @@
 """
 Contains Rectangle Model for creating rectangles
 """
-from .base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -29,7 +29,7 @@ class Rectangle(Base):
 
     def __str__(self):
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - \
-    {self.width}/{self.height}"
+{self.width}/{self.height}"
 
     @property
     def width(self):
