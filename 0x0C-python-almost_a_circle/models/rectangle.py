@@ -73,5 +73,18 @@ class Rectangle(Base):
 
     @staticmethod
     def validate_int(value, attr):
+        """
+        Validates that a value is a valid integer
+        """
         if not (isinstance(value, int)):
             raise TypeError(f"{attr} must be an integer")
+
+
+r1 = Rectangle(10, 2)
+print(r1.id)
+
+r2 = Rectangle(2, 10)
+print(r2.id)
+
+r3 = Rectangle(10, 2, 0, 0, 12)
+print(r3.id)
