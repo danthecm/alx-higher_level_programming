@@ -97,7 +97,12 @@ class Rectangle(Base):
         """
         Prints a # representation of the rectangle
         """
+        if self.y > 0:
+            for i in range(self.y):
+                print("")
         for i in range(self.__height):
+            if self.x > 0:
+                print(" " * self.x, end="")
             print("#" * self.__width)
 
     @staticmethod
