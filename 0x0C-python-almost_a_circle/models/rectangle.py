@@ -106,6 +106,9 @@ class Rectangle(Base):
             print("#" * self.__width)
 
     def update(self, *args):
+        """
+        Update the class properties with the given arguments
+        """
         update_order = ["id", "width", "height", "x", "y"]
         if len(args) <= len(update_order):
             for i in range(len(args)):
