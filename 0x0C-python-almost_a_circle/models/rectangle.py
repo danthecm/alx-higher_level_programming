@@ -25,7 +25,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, width):
-        self.validate_int(width, "width")
+        # self.validate_int(width, "width")
         self.__width = width
 
     @width.getter
@@ -38,7 +38,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, height):
-        self.validate_int(height, "height")
+        # self.validate_int(height, "height")
         self.__height = height
 
     @height.getter
@@ -51,7 +51,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, x):
-        self.validate_int(x, "x")
+        # self.validate_int(x, "x")
         self.__x = x
 
     @width.getter
@@ -64,7 +64,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, y):
-        self.validate_int(y, "y")
+        # self.validate_int(y, "y")
         self.__y = y
 
     @y.getter
@@ -78,13 +78,3 @@ class Rectangle(Base):
         """
         if not (isinstance(value, int)):
             raise TypeError(f"{attr} must be an integer")
-
-
-r1 = Rectangle(10, 2)
-print(r1.id)
-
-r2 = Rectangle(2, 10)
-print(r2.id)
-
-r3 = Rectangle(10, 2, 0, 0, 12)
-print(r3.id)
