@@ -26,10 +26,13 @@ class Base:
         """
         Save a list of object to a json file
         """
-        with open(f"{cls.__name__}.json", "w", encoding="utf8") as f:
-            f.write(cls.to_json_string(
-                [item.to_dictionary() for item in list_objs]))
-
+        if list_objs is None or len(list_objs) < 1:
+            with open(f"{cls.__name__}.json", "w", encoding="utf8") as f:
+                f.write(cls.to_json_string(list_objs))
+        else:
+            with open(f"{cls.__name__}.json", "w", encoding="utf8") as f:
+                f.write(cls.to_json_string(
+                    [item.to_dictionary() for item in list_objs]))
 
     @staticmethod
     def to_json_string(list_dictionaries):
