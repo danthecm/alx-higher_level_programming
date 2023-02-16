@@ -21,6 +21,16 @@ class Base:
         else:
             self.id = id
 
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """
+        Save a list of object to a json file
+        """
+        with open(f"{cls.__name__}.json", "w", encoding="utf8") as f:
+            f.write(cls.to_json_string(
+                [item.to_dictionary() for item in list_objs]))
+
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """
