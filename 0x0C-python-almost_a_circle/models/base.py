@@ -23,7 +23,7 @@ class Base:
 
     def to_json_string(list_dictionaries):
         """
-        Returns a string representation 
+        Returns a string representation
         of a given list of dictionaries
         """
         if list_dictionaries is None or len(list_dictionaries) < 1:
