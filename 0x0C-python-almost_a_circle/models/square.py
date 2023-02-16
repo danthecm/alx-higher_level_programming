@@ -19,6 +19,19 @@ class Square(Rectangle):
         message = "[Square] ({}) {}/{} - {}"
         return message.format(self.id, self.x, self.y, self.width)
 
+    @property
+    def size(self):
+        return self.__width
+
+    @size.setter
+    def size(self, value):
+        self.width = value
+        self.height = value
+
+    @size.getter
+    def size(self):
+        return self.width
+
     def area(self):
         """
         Returns the area of the square
