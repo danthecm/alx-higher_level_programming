@@ -28,7 +28,4 @@ class Base:
         """
         if list_dictionaries is None or len(list_dictionaries) < 1:
             return json.dumps([])
-        my_list = []
-        for dictionary in list_dictionaries:
-            my_list.append(json.dumps(dictionary))
-        return json.dumps(my_list)
+        return json.dumps(list_dictionaries)
