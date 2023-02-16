@@ -2,6 +2,7 @@
 """
 Contains base Model for creating shapes
 """
+import json
 
 
 class Base:
@@ -19,3 +20,15 @@ class Base:
             self.id = self.__nb_objects
         else:
             self.id = id
+
+    def to_json_string(list_dictionaries):
+        """
+        Returns a string representation 
+        of a given list of dictionaries
+        """
+        if list_dictionaries is None or len(list_dictionaries) < 1:
+            return json.dumps([])
+        my_list = []
+        for dictionary in list_dictionaries:
+            my_list.append(json.dumps(dictionary))
+        return json.dumps(my_list)
