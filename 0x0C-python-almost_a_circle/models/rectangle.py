@@ -117,6 +117,15 @@ class Rectangle(Base):
             for key in kwargs:
                 self.__setattr__(key, kwargs.get(key))
 
+    def to_dictionary(self):
+        """
+        Returns a dictionary representation of the class
+        """
+        return {
+            "id": self.id, "width": self.width,
+            "height": self.height, "x": self.x,
+            "y": self.y}
+
     @staticmethod
     def validate_int(value, attr):
         """
