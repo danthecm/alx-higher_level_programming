@@ -43,3 +43,13 @@ class Base:
         if list_dictionaries is None or len(list_dictionaries) < 1:
             return json.dumps([])
         return json.dumps(list_dictionaries)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        Returns a list representation
+        of a given json string
+        """
+        if json_string is None:
+            return json.loads([])
+        return json.loads(json_string)
