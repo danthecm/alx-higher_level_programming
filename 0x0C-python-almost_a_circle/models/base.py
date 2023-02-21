@@ -60,6 +60,6 @@ class Base:
         Returns an instance of the class
         with all attributes set
         """
-        dummy_class = cls(1, 1)
+        dummy_class = cls(1, 1) if cls.__name__ == "Rectangle" else cls(1)
         dummy_class.update(**dictionary)
         return dummy_class
