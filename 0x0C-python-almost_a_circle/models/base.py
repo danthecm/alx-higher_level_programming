@@ -61,5 +61,6 @@ class Base:
         with all attributes set
         """
         dummy_class = cls(1, 1) if cls.__name__ == "Rectangle" else cls(1)
+        print(f"The class name is {cls.__name__}")
         dummy_class.update(**dictionary)
         return dummy_class
