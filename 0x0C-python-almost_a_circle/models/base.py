@@ -70,10 +70,13 @@ class Base:
         Loads a dictionary representation of a class
         from a json file and returns an instance of the class
         """
-        with open(f"./{cls.__name__}.json", "r") as f:
-            if f.seek(0, 1) != 0:
-                return []
-            for line in f:
-                class_list = cls.from_json_string(line)
-            class_list = [cls.create(**item) for item in class_list]
-            return class_list
+        try:
+            with open(f"./{cls.__name__}.json", "r") as f:
+                if f.seek(0, 1) != 0:
+                    return []
+                for line in f:
+                    class_list = cls.from_json_string(line)
+                class_list = [cls.create(**item) for item in class_list]
+                return class_list if class_list else []
+        except FileNotFoundError:
+            return []
