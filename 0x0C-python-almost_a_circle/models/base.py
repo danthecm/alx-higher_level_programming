@@ -63,3 +63,17 @@ class Base:
         dummy_class = cls(1, 1) if cls.__name__ == "Rectangle" else cls(1)
         dummy_class.update(**dictionary)
         return dummy_class
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        Loads a dictionary representation of a class
+        from a json file and returns an instance of the class
+        """
+        with open(f"./{cls.__name__}.json", "r") as f:
+            if f.seek(0, 1) != 0:
+                return []
+            for line in f:
+                class_list = cls.from_json_string(line)
+            class_list = [cls.create(**item) for item in class_list]
+            return class_list
