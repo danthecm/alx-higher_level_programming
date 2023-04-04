@@ -15,7 +15,11 @@ def roman_to_int(roman_string):
     }
     for index, letter in enumerate(roman_string):
         if index > 0:
-            if roman_string[index] != "I" and roman_string[index - 1] == "I":
-                result += -2
+            prev_letter = roman_string[index - 1]
+            if roman_numerals.get(letter) > roman_numerals.get(prev_letter):
+                    result += roman_numerals.get(prev_letter) * -2
         result += roman_numerals.get(letter)
     return result
+
+test = "XCIXXXX"
+print(roman_to_int(test))
