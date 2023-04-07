@@ -13,7 +13,7 @@ class Node:
         return self.__data
 
     @data.setter
-    def date(self, value):
+    def data(self, value):
         if not isinstance(value, int):
             raise TypeError("data must be an integer")
         self.__data = value
@@ -34,7 +34,13 @@ class SinglyLinkedList:
         self.head = None
 
     def __str__(self) -> str:
-        return self.__head
+        value_arr = []
+        traverse(self.head, value_arr)
+        value_arr.sort()
+        return "".join(
+            map(lambda x: str(x) + "\n"
+                if value_arr.index(x) != len(value_arr) - 1
+                else str(x), value_arr))
 
     def sorted_insert(self, value):
         if self.head is None:
@@ -46,11 +52,8 @@ class SinglyLinkedList:
             self.head = new_node
 
 
-sll = SinglyLinkedList()
-sll.sorted_insert(2)
-sll.sorted_insert(5)
-sll.sorted_insert(10)
-
-print(sll.traverse(sll.head))
-
-# print(sll.head.data)
+def traverse(head, arr):
+    arr.append(head.data)
+    if head.next_node is None:
+        return ""
+    return traverse(head.next_node, arr)
