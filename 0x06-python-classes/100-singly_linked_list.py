@@ -50,10 +50,11 @@ class SinglyLinkedList:
             value_arr.append(temp_head.data)
             temp_head = temp_head.next_node
         value_arr.sort()
+        value_arr = [(index, value) for index, value in enumerate(value_arr)]
         return "".join(
-            map(lambda x: str(x) + "\n"
-                if value_arr.index(x) != len(value_arr) - 1
-                else str(x), value_arr))
+            map(lambda x: str(x[1]) + "\n"
+                if x[0] != len(value_arr) - 1
+                else str(x[1]), value_arr))
 
     def sorted_insert(self, value):
         """Insert a new node into the linked list"""
