@@ -16,10 +16,10 @@ def text_indentation(text):
         if character in specials:
             new_text += f"{character}\n\n"
             continue
-        if character == " " and len(text) > index + 1:
-            if text[index - 1] in specials or text[index + 1] in specials:
-                continue
-            elif text[index - 1] == " " and text[index + 1] == " ":
-                continue
+        # if character == " " and len(text) > index + 1:
+        #     if text[index - 1] in specials or text[index + 1] in specials:
+        #         continue
+        #     elif text[index - 1] == " " and text[index + 1] == " ":
+        #         continue
         new_text += character
     print(new_text)
