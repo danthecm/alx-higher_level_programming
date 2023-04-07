@@ -37,3 +37,5 @@ Now use it:
     123
     >>> add_integer(float('inf'), 89)
     89
+    >>> add_integer(float('inf'))
+    89
