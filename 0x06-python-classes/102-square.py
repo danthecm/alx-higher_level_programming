@@ -59,3 +59,15 @@ class Square:
         Returns true if the square area is lesser else false
         """
         return isinstance(__value, Square) and self.area() < __value.area()
+
+    def __ge__(self, __value: object) -> bool:
+        """
+        Returns true if the square area is greater or equal else false
+        """
+        return isinstance(__value, Square) and self.area() >= __value.area()
+
+    def __le__(self, __value: object) -> bool:
+        """
+        Returns true if the square area is lesser or equal else false
+        """
+        return isinstance(__value, Square) and self.area() <= __value.area()
