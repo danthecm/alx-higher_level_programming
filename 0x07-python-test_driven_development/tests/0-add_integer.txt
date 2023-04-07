@@ -38,4 +38,4 @@ Now use it:
     >>> add_integer(float('inf'), 89)
     89
     >>> add_integer(1e308, 1e308)
-    89
+    
