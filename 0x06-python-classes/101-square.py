@@ -42,7 +42,8 @@ class Square:
             for i in range(0, self.size):
                 if self.position[0] > 0:
                     str_rep += ' ' * self.position[0]
-                str_rep += "#" * self.size + "\n"
+                str_rep += "#" * self.size
+                str_rep += "\n" if i != self.size - 1 else ""
         return str_rep
 
     @property
