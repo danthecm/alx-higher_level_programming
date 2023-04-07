@@ -33,7 +33,17 @@ class Square:
 
     def __str__(self):
         """Returns a string representation of a Square"""
-        return self.my_print()
+        str_rep = ""
+        if self.size == 0:
+            str_rep = ""
+        else:
+            for i in range(self.position[1]):
+                str_rep += "\n"
+            for i in range(0, self.size):
+                if self.position[0] > 0:
+                    str_rep += ' ' * self.position[0] + "\n"
+                str_rep += "#" * self.size
+        return str_rep
 
     @property
     def size(self) -> int:
