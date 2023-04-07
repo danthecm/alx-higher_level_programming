@@ -36,6 +36,6 @@ Now use it:
     >>> add_integer(add_integer(10, 15))
     123
     >>> add_integer(float('inf'), 89)
-    89
+    
     >>> add_integer(1e308, 1e308)
     
