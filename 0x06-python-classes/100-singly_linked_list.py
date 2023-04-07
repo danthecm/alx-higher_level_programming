@@ -46,7 +46,7 @@ class SinglyLinkedList:
     def __str__(self) -> str:
         value_arr = []
         temp_head = self.head
-        while temp_head.next_node is not None:
+        while temp_head is not None:
             value_arr.append(temp_head.data)
             temp_head = temp_head.next_node
         value_arr.sort()
@@ -84,3 +84,18 @@ def traverse(head, arr=[], new_head=None):
                 new_head = new_node
         return new_head
     return traverse(head.next_node, arr)
+
+
+sll = SinglyLinkedList()
+sll.sorted_insert(2)
+sll.sorted_insert(5)
+sll.sorted_insert(3)
+sll.sorted_insert(10)
+sll.sorted_insert(1)
+sll.sorted_insert(-4)
+sll.sorted_insert(-3)
+sll.sorted_insert(4)
+sll.sorted_insert(5)
+sll.sorted_insert(12)
+sll.sorted_insert(3)
+print(sll)
