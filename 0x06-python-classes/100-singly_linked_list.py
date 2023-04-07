@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-A simple module implementing a node class and a linked list 
+A simple module implementing a node class and a linked list
 """
 
 
