@@ -1,2 +1,2 @@
 #!/usr/bin/node
-export let myVar = 333;
+export const myVar = 333;
