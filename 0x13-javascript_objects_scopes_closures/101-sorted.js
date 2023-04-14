@@ -7,7 +7,7 @@ for (const key in dict) {
   if (!Object.hasOwnProperty.call(newDict, score)) {
     Object.assign(newDict, { [score]: [] });
   }
-  newDict[score].push(parseInt(key));
+  newDict[score].push(key);
 }
 
 console.log(newDict);
