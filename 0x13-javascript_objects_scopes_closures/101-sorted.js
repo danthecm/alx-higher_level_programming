@@ -2,11 +2,10 @@
 const dict = require('./101-data.js').dict;
 const newDict = {};
 for (const key in dict) {
-  if (!Object.hasOwnProperty.call(newDict, dict[key])) {
-    newDict[dict[key]] = [];
+  const score = parseInt(dict[key]);
+  console.log(typeof score);
+  if (!Object.hasOwnProperty.call(newDict, score)) {
+    Object.assign(newDict, { [score]: [] });
   }
-
-  newDict[dict[key]].push(key);
+  newDict[score].push(parseInt(key));
 }
-console.log(dict);
-console.log(newDict);
