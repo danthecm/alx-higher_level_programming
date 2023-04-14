@@ -9,3 +9,5 @@ for (const key in dict) {
   }
   newDict[score].push(parseInt(key));
 }
+
+console.log(newDict);
