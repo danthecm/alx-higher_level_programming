@@ -1,4 +1,4 @@
 -- Delete all records with scores less than 5
 DELETE *
 FROM second_table
-WHERE scores <= 5;
+WHERE score <= 5;
