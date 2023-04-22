@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-Script that lists all State objects
-that contains the letter a from the a database
+Adds the State object "Louisiana" to a database
 """
 import sys
 from model_state import State, Base
@@ -23,12 +22,12 @@ if __name__ == "__main__":
 
     session = Session()
 
-    new_state = State(name = "Louisiana")
+    new_state = State(name="Louisiana")
 
     session.add(new_state)
 
     session.commit()
-    
+
     print(new_state.id)
 
     session.close()
