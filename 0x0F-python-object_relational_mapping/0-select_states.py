@@ -12,15 +12,13 @@ if __name__ == "__main__":
     db_name = sys.argv[3]
 
     db = MySQLdb.connect(host="localhost", user=username,
-                        passwd=password, db=db_name)
+                         passwd=password, db=db_name)
 
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states")
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
 
-    result = list(cur.fetchall())
-
-    result.sort(key=lambda x: x[0])
+    result = cur.fetchall()
 
     for row in result:
         print(row)
