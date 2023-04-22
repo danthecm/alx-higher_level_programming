@@ -25,7 +25,7 @@ if __name__ == "__main__":
     session = Session()
 
     state = session.query(State).filter(
-        name=state_name).order_by(State.id).first()
+        State.name == state_name).order_by(State.id).first()
 
     if state:
         print("{}".format(state.id))
