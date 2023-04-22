@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-A module containing a State class that
+A module containing a City class that
 inherits from SQLALchemy declerative_base class
 """
 from sqlalchemy import Column, Integer, String, ForeignKey
