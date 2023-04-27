@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-url=$1
-response=$(curl -s -w '%{size_download}' -o /dev/null $url)
-echo "$response"
+# a shell script that makes a request to a url and returns the size
+echo "$(curl -s -w '%{size_download}' -o /dev/null $1)"
