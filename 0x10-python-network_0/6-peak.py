@@ -13,6 +13,6 @@ def find_peak(list_of_integers):
     int: peak if list is not empty else None
     """
     if len(list_of_integers) > 0:
-        list_of_integers.sort(reverse=True)
-        return list_of_integers[1]
+        list_of_integers.sort()
+        return list_of_integers[-1]
     return None
