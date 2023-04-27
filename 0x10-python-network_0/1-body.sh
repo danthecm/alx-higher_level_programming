@@ -1,3 +1,3 @@
 #!/bin/bash
 # sends a curl request and displays the response if status code is 200
-curl -s -w '\n%{http_code}\n' $1 | grep -q '200$' && curl -s $1
+output=$(curl -s -w '%{http_code}' $1) && echo "$output" | grep -q '200$' && echo "$output" | sed '$d'
