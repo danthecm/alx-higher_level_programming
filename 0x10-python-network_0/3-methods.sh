@@ -1,3 +1,3 @@
 #!/bin/bash
 # a shell script that displays the allowed methods of a request
-curl -sH "X-School-User-Id: 98" "$1"
+curl -Is "$1" | grep Allow | cut -c 8-
