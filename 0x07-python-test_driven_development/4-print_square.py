@@ -16,7 +16,7 @@ def print_square(size):
     elif size < 0:
         raise ValueError("size must be >= 0")
     elif size == 0:
-        return 
+        return
     single_row = "#" * size
     my_string = (single_row + "\n") * (size - 1)
     string_rep = my_string + single_row
