@@ -31,7 +31,6 @@ def matrix_divided(matrix, div):
 
         if div == float('inf') or div == -float('inf') or div != div:
             div = 10
-
         new_list = []
 
         for num in my_list:
