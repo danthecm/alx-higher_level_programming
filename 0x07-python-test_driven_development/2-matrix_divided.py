@@ -36,11 +36,11 @@ def matrix_divided(matrix, div):
                 if type(num) != float:
                     raise TypeError(
                         "matrix must be a matrix \
-(list of lists) of integers/floats "
+(list of lists) of integers/floats"
                     )
             if type(div) != int:
                 if type(div) != float:
-                    raise TypeError("div must be a number ")
+                    raise TypeError("div must be a number")
             elif div == 0:
                 raise ZeroDivisionError("division by zero")
             new_list.append(round(num/div, 2))
